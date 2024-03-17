@@ -34,6 +34,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# picom is a compositor
+exec --no-startup-id picom -b
+
+# Nitrogen is for wallpaper
+exec_always nitrogen --restore
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -213,6 +219,3 @@ client.urgent           #ff7b72 #ffa198 #f0f6fc #484f58   #484f58
 client.placeholder      #000000 #0c0c0c #f0f6fc #000000   #0c0c0c
 
 client.background       #f0f6fc
-
-# Start nitrogen on startup
-exec_always nitrogen --restore
