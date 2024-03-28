@@ -71,6 +71,12 @@ bindsym $mod+d exec "rofi -modi drun,run -show drun -icon-theme 'Papirus' -show-
 # start firefox
 bindsym $mod+b exec firefox
 
+# start firefox with "Work" profile
+bindsym $mod+n exec firefox -P "Work"
+
+# start obsidian
+bindsym $mod+o exec obsidian
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
